@@ -132,8 +132,11 @@ nav .navbar .navbar-contents{
 
 main .bg-img{
   background-image: url('../public/images/background-image.png');
-  height: 880px;
+  background-repeat: no-repeat;
+  height: 100vh;
   z-index: 1;
+  width: 100vw;
+  background-size: cover;
 }
 
 main .hero-page{
@@ -175,16 +178,17 @@ main .hero-page .intro>h1{
   color: var(--secondary);
 }
 
-.hero-page .intro .learn-btn:hover{
+.hero-page .intro .learn-btn:hover {
   background: var(--secondary);
 }
 
-.intro .learn-btn>a:hover{
+.hero-page .intro .learn-btn:hover a{
   color: var(--primary);
 }
 
 
 .city-posters{
+  
   gap: 50px;
 }
 
@@ -236,4 +240,22 @@ footer>div{
   transform: translate(20px, 40px);
   transition: all .5s ease-in-out;
 }
+
+
+
+/* viewport =< 1300px */
+@media only screen and (max-width:720px) {
+  .hero-page{
+    justify-content: space-around;
+  }
+
+  .city-posters{
+    justify-content: space-around;
+  }
+
+  main .bg-img{
+    height: 60vh;
+  }
+}
+
 
